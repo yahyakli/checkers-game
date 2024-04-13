@@ -1,14 +1,14 @@
 window.onload = function () {
 
   var gameBoard = [
-    [0, 1, 0, 1, 0, 1, 0, 1],
     [1, 0, 1, 0, 1, 0, 1, 0],
     [0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [2, 0, 2, 0, 2, 0, 2, 0],
     [0, 2, 0, 2, 0, 2, 0, 2],
-    [2, 0, 2, 0, 2, 0, 2, 0]
+    [2, 0, 2, 0, 2, 0, 2, 0],
+    [0, 2, 0, 2, 0, 2, 0, 2]
   ];
 
   var pieces = [];
@@ -160,7 +160,7 @@ window.onload = function () {
       for (let row in this.board) { //row = index
         for (let column in this.board[row]) { //column = index
           //whole set of if statements control where the tiles and pieces should be placed on the board
-          if (row % 2 == 1) {
+          if (row % 2 == 0) {
             if (column % 2 == 0) {
               countTiles = this.tileRender(row, column, countTiles);
             }

@@ -48,7 +48,8 @@ div.info, div.stats {
   background-color: whitesmoke;
   color: black;
   border-radius: 3px;
-  box-shadow: 1px 1px 3px black; 
+  box-shadow: 1px 1px 10px black; 
+  border-radius: 20px;
 }
 
 div.stats {
