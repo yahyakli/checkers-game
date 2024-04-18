@@ -50,6 +50,7 @@ div.info, div.stats {
   border-radius: 3px;
   box-shadow: 1px 1px 10px black; 
   border-radius: 20px;
+  text-align: center;
 }
 
 div.stats {
