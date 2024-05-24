@@ -10,9 +10,11 @@ body {
   font-size: 16px;
   background-image: url("img/Light-Wood-Background-Texture.jpg");
   background-size: cover; 
+  display: flex;
+  align-items: center;
 }
-  body h1 {
-    margin-top: 10px; 
+body h1 {
+  margin-top: 10px; 
   }
   body h2 {
     font-size: 1.3em; 
@@ -34,9 +36,7 @@ body {
 
 div.column {
   position: relative;
-  float: left;
   overflow: auto;
-  height: 100%;
   min-height: 100%;
   width: 50%; 
 }
@@ -56,11 +56,11 @@ div.info, div.stats {
 div.stats {
   margin: 50px auto !important; 
 }
-  div.stats .wrapper {
-    display: flex; 
-  }
-  div.stats #player1 {
-    text-align: center;
+div.stats .wrapper {
+  display: flex; 
+}
+div.stats #player1 {
+  text-align: center;
     display: inline-block;
     width: 50%;
     float: left;
@@ -83,17 +83,17 @@ div.stats {
       transition: all 0.2s linear;
       margin: 5px; 
     }
-  div.stats #player2 {
-    text-align: center;
-    display: inline-block;
-    width: 50%;
-    float: left;
-    background-color: blue;
-    box-sizing: border-box;
-    padding: 0 15px 20px;
-    border-top-right-radius: 3px;
-    color: white; 
-  }
+    div.stats #player2 {
+      text-align: center;
+      display: inline-block;
+      width: 50%;
+      float: left;
+      background-color: blue;
+      box-sizing: border-box;
+      padding: 0 15px 20px;
+      border-top-right-radius: 3px;
+      color: white; 
+    }
     div.stats #player2 .capturedPiece {
       width: 2.4vmin;
       height: 2.4vmin;
@@ -107,12 +107,12 @@ div.stats {
       transition: all 0.2s linear;
       margin: 5px; 
     }
-  div.stats div.turn {
-    height: 10px;
-    width: 100%;
-    background: linear-gradient(to right, lightgreen 50%, transparent 50%);
-    border-radius: 0 0 3px 3px; 
-  }
+    div.stats div.turn {
+      height: 10px;
+      width: 100%;
+      background: linear-gradient(to right, lightgreen 50%, transparent 50%);
+      border-radius: 0 0 3px 3px; 
+    }
   div.stats span#winner {
     display: block;
     padding: 10px 0 0;
@@ -130,11 +130,11 @@ div.stats {
     box-shadow: 1px 1px 3px black;
     transition: background-color 0.15s linear; 
   }
-    div.stats button#cleargame:hover {
-      background-color: lightseagreen; 
-    }
-
-div#board {
+  div.stats button#cleargame:hover {
+    background-color: lightseagreen; 
+  }
+  
+  div#board {
   position: absolute;
   top: calc(50% - 40vmin);
   left: calc(50% - 40vmin);
@@ -146,13 +146,13 @@ div#board {
   border: 1px solid white;
   outline: 10px solid black;
 }
-  div#board .tile {
-    width: 10vmin;
-    height: 10vmin;
-    position: absolute;
-    background-color: black; 
-  }
-  div#board .player1pieces .piece {
+div#board .tile {
+  width: 10vmin;
+  height: 10vmin;
+  position: absolute;
+  background-color: black; 
+}
+div#board .player1pieces .piece {
     position: absolute;
     width: 8vmin;
     height: 8vmin;
@@ -169,8 +169,8 @@ div#board {
     cursor: pointer;
     border: 1vmin solid tomato; 
   }
-    div#board .player1pieces .piece.selected {
-      box-shadow: 0 0 10px 5px lightblue; 
+  div#board .player1pieces .piece.selected {
+    box-shadow: 0 0 10px 5px lightblue; 
     }
   div#board .player2pieces .piece {
     position: absolute;
@@ -189,6 +189,14 @@ div#board {
     cursor: pointer;
     border: 1vmin solid lightskyblue; 
   }
-    div#board .player2pieces .piece.selected {
+  div#board .player2pieces .piece.selected {
       box-shadow: 0 0 10px 5px lightblue; 
     }
+@media(max-width:1500px){
+  body{
+    flex-direction: column;
+  }
+  div.column{
+    width: 100%;
+  }
+}

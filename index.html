@@ -5,17 +5,8 @@
   <link href="style.css" rel="stylesheet">
   <script src="script.js"></script>
 </head>
-<body>
-	<div class="column">
-    <div id="board">
-      <div class="tiles"></div>
-      <div class="pieces">
-        <div class="player1pieces"></div>
-        <div class="player2pieces"></div>
-      </div>
-    </div>
-  </div>
-  <div class="column">
+<body >
+  <div class="column relative">
     <div class="info">
       <h1>Checkers Game</h1>
     </div>
@@ -33,6 +24,15 @@
       <div class="turn"></div>
       <span id="winner"></span>
       <button id="cleargame">Reset Game</button>
+    </div>
+  </div>
+  <div class="column">
+    <div id="board">
+      <div class="tiles"></div>
+      <div class="pieces">
+        <div class="player1pieces"></div>
+        <div class="player2pieces"></div>
+      </div>
     </div>
   </div>
 </body>
